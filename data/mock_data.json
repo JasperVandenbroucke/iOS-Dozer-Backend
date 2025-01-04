@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "machineName": "Catterpillar 320",
+    "machineType": "Graafmachine",
+    "basePrice": 25000,
+    "options": [
+      {
+        "id": 1,
+        "optionName": "Light on the front",
+        "price": 100
+      },
+      {
+        "id": 2,
+        "optionName": "High-performance cooling system",
+        "price": 2000
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "machineName": "Fennec 640",
+    "machineType": "Rupsmachine",
+    "basePrice": 35000,
+    "options": [
+      {
+        "id": 1,
+        "optionName": "LED lights",
+        "price": 1500
+      },
+      {
+        "id": 2,
+        "optionName": "High-resolution display",
+        "price": 2500
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "machineName": "Rex 128",
+    "machineType": "Bulldozer",
+    "basePrice": 20000,
+    "options": [
+      {
+        "id": 1,
+        "optionName": "High-performance cooling system",
+        "price": 1500
+      },
+      {
+        "id": 2,
+        "optionName": "Smart controls",
+        "price": 500
+      },
+      {
+        "id": 3,
+        "optionName": "LED lights",
+        "price": 1000
+      }
+    ]
+  }
+]
