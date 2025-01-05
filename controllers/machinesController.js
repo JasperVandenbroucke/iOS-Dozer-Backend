@@ -120,19 +120,22 @@ const deleteMachineById = (req, res) => {
     return;
   }
 
-  const machineToDelete = machines_mock.find(
-    (m) => m.id === parseInt(req.params.id)
-  );
-
-  if (!machineToDelete) {
-    res.status(404).send(`No machines with id ${req.params.id}`);
+  const id = parseInt(req.params.id);
+  if (isNaN(id)) {
+    res.status(400).send("Invalid machine id: not a number");
     return;
   }
 
-  // req.params.id - 1 to get the corresponding machine to delete
-  machines_mock.splice(req.params.id - 1, 1);
+  const machineIndex = machines_mock.findIndex((m) => m.id === id);
 
-  res.status(200).send(machineToDelete);
+  if (machineIndex === -1) {
+    res.status(404).send(`No machine with id ${id}`);
+    return;
+  }
+
+  const [deletedMachine] = machines_mock.splice(machineIndex, 1);
+
+  res.status(200).json(deletedMachine);
 };
 
 function validateMachine(machine) {
