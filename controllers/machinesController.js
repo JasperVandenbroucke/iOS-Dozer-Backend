@@ -17,43 +17,6 @@ const getAllMachines = (req, res) => {
   res.status(200).send(filteredMachines);
 };
 
-// GET MACHINE BY ID
-const getMachineById = (req, res) => {
-  if (!req.params.id) {
-    res.status(400).send("Invalid machine id");
-    return;
-  }
-
-  const machine = machines_mock.find((m) => m.id === parseInt(req.params.id));
-
-  if (!machine) {
-    res.status(404).send(`No machine with id ${req.params.id}`);
-    return;
-  }
-
-  res.status(200).send(machine);
-};
-
-// GET MACHINES BY TYPE
-const getMachinesByType = (req, res) => {
-  if (!req.params.type) {
-    res.status(400).send("Invalid machine type");
-    return;
-  }
-
-  const machines = machines_mock.filter(
-    (m) =>
-      m.machineType.toLocaleLowerCase() === req.params.type.toLocaleLowerCase()
-  );
-
-  if (machines.length === 0) {
-    res.status(404).send(`No machines with type ${req.params.type}`);
-    return;
-  }
-
-  res.status(200).send(machines);
-};
-
 // CREATE MACHINE
 const createMachine = (req, res) => {
   const { error } = validateMachine(req.body);
