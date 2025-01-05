@@ -121,8 +121,6 @@ function validateMachine(machine) {
 
 module.exports = {
   getAllMachines,
-  getMachineById,
-  getMachinesByType,
   createMachine,
   updateMachine,
   deleteMachineById,
