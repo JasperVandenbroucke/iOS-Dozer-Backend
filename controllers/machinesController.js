@@ -87,20 +87,20 @@ const updateMachine = (req, res) => {
     return;
   }
 
+  // Validate the machineToUpdate
+  const { error } = validateMachine(req.body);
+  if (error) {
+    res.status(400).send(error.details[0].message);
+    console.log(`⚠️ Error: ${error.details[0].message}`);
+    return;
+  }
+
   // Check if there is an existing machine
   const machineToUpdate = machines_mock.find((m) => m.id === parseInt(id));
 
   if (!machineToUpdate) {
     res.status(404).send(`No machine with id ${id}`);
     console.log(`⚠️ No machine with id ${id}`);
-    return;
-  }
-
-  // Validate the machineToUpdate
-  const { error } = validateMachine(req.body);
-  if (error) {
-    res.status(400).send(error.details[0].message);
-    console.log(`⚠️ Error: ${error.details[0].message}`);
     return;
   }
 
