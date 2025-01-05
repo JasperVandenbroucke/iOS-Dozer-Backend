@@ -103,16 +103,16 @@ const deleteMachineById = (req, res) => {
 
 function validateMachine(machine) {
   const optionScheme = Joi.object({
-    id: Joi.number().optional(),
-    optionName: Joi.string().required(),
-    price: Joi.number().required(),
+    id: Joi.number(),
+    optionName: Joi.string(),
+    price: Joi.number().min(0),
   });
 
   const machineScheme = Joi.object({
     id: Joi.number().optional(),
     machineName: Joi.string().required(),
     machineType: Joi.string().required(),
-    basePrice: Joi.number().required(),
+    basePrice: Joi.number().min(1000).required(),
     options: Joi.array().items(optionScheme),
   });
 
