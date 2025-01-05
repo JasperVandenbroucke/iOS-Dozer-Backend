@@ -2,7 +2,7 @@
   {
     "id": 1,
     "machineName": "Catterpillar 320",
-    "machineType": "Graafmachine",
+    "machineType": "Excavator",
     "basePrice": 25000,
     "options": [
       {
@@ -20,7 +20,7 @@
   {
     "id": 2,
     "machineName": "Fennec 640",
-    "machineType": "Rupsmachine",
+    "machineType": "Crawler Machine",
     "basePrice": 35000,
     "options": [
       {
@@ -57,5 +57,86 @@
         "price": 1000
       }
     ]
+  },
+  {
+    "id": 4,
+    "machineName": "Tiger 1024",
+    "machineType": "Excavator",
+    "basePrice": 30000,
+    "options": [
+      {
+        "id": 1,
+        "optionName": "LED lights",
+        "price": 1200
+      },
+      {
+        "id": 2,
+        "optionName": "High-resolution display",
+        "price": 2000
+      },
+      {
+        "id": 3,
+        "optionName": "Smart controls",
+        "price": 500
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "machineName": "Lion 2048",
+    "machineType": "Bulldozer",
+    "basePrice": 35000,
+    "options": [
+      {
+        "id": 1,
+        "optionName": "Smart controls",
+        "price": 500
+      },
+      {
+        "id": 2,
+        "optionName": "LED lights",
+        "price": 1000
+      },
+      {
+        "id": 3,
+        "optionName": "High-performance cooling system",
+        "price": 1500
+      },
+      {
+        "id": 4,
+        "optionName": "High-resolution display",
+        "price": 2000
+      },
+      {
+        "id": 5,
+        "optionName": "Voice commands",
+        "price": 100
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "machineName": "Eagle 4096",
+    "machineType": "Excavator",
+    "basePrice": 40000,
+    "options": [
+      {
+        "id": 1,
+        "optionName": "Smart controls",
+        "price": 500
+      },
+      {
+        "id": 2,
+        "optionName": "LED lights",
+        "price": 1000
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "machineName": "Bear 8192",
+    "machineType": "Crawler Machine",
+    "basePrice": 450000,
+    "options": []
   }
 ]
